@@ -1,0 +1,500 @@
+2023-07-17 17:16:20,297 __main__ (lichess-bot.py:965) INFO 
+    .   _/|
+    .  // o\
+    .  || ._)  lichess-bot 2023.7.11.3
+    .  //__\
+    .  )___(   Play on Lichess with a bot
+    
+2023-07-17 17:16:20,313 config (config.py:242) DEBUG Config:
+token: logger
+url: https://lichess.org/
+engine:
+  dir: ./engines/
+  name: beatrijs
+  working_dir: ''
+  protocol: uci
+  ponder: false
+  polyglot:
+    enabled: false
+    book:
+      standard:
+      - engines/book1.bin
+      - engines/book2.bin
+    min_weight: 1
+    selection: weighted_random
+    max_depth: 20
+  draw_or_resign:
+    resign_enabled: false
+    resign_score: -1000
+    resign_for_egtb_minus_two: true
+    resign_moves: 3
+    offer_draw_enabled: true
+    offer_draw_score: 0
+    offer_draw_for_egtb_zero: true
+    offer_draw_moves: 10
+    offer_draw_pieces: 10
+  online_moves:
+    max_out_of_book_moves: 10
+    max_retries: 2
+    chessdb_book:
+      enabled: false
+      min_time: 20
+      move_quality: good
+      min_depth: 20
+    lichess_cloud_analysis:
+      enabled: false
+      min_time: 20
+      move_quality: best
+      max_score_difference: 50
+      min_depth: 20
+      min_knodes: 0
+    lichess_opening_explorer:
+      enabled: false
+      min_time: 20
+      source: masters
+      player_name: ''
+      sort: winrate
+      min_games: 10
+    online_egtb:
+      enabled: false
+      min_time: 20
+      max_pieces: 7
+      source: lichess
+      move_quality: best
+  lichess_bot_tbs:
+    syzygy:
+      enabled: false
+      paths:
+      - engines/syzygy
+      max_pieces: 7
+      move_quality: best
+    gaviota:
+      enabled: false
+      paths:
+      - engines/gaviota
+      max_pieces: 5
+      min_dtm_to_consider_as_wdl_1: 120
+      move_quality: best
+  homemade_options: null
+  uci_options:
+    Hash: 512
+  silence_stderr: false
+abort_time: 30
+fake_think_time: false
+rate_limiting_delay: 0
+move_overhead: 1000
+correspondence:
+  move_time: 60
+  checkin_period: 300
+  disconnect_time: 150
+  ponder: false
+challenge:
+  concurrency: 1
+  sort_by: best
+  accept_bot: true
+  only_bot: false
+  max_increment: 20
+  min_increment: 0
+  max_base: 1800
+  min_base: 0
+  max_days: 14
+  min_days: 1
+  variants:
+  - standard
+  time_controls:
+  - bullet
+  - blitz
+  - rapid
+  - classical
+  modes:
+  - casual
+  - rated
+  bullet_requires_increment: false
+greeting:
+  hello: Hi! I'm {me}. Good luck! Type !help for a list of commands I can respond
+    to.
+  goodbye: Good game!
+  hello_spectators: Hi! I'm {me}. Type !help for a list of commands I can respond
+    to.
+  goodbye_spectators: Thanks for watching!
+matchmaking:
+  allow_matchmaking: false
+  challenge_variant: random
+  challenge_timeout: 30
+  challenge_initial_time:
+  - 60
+  - 180
+  challenge_increment:
+  - 1
+  - 2
+  opponent_rating_difference: 300
+  opponent_allow_tos_violation: false
+  challenge_mode: random
+  challenge_filter: none
+
+2023-07-17 17:16:20,325 config (config.py:243) DEBUG ====================
+2023-07-17 17:16:20,330 config (config.py:242) DEBUG Config:
+token: logger
+url: https://lichess.org/
+engine:
+  dir: ./engines/
+  name: beatrijs
+  working_dir: /home/dewaeq/dev/beatrijs-lila
+  protocol: uci
+  ponder: false
+  polyglot:
+    enabled: false
+    book:
+      standard:
+      - engines/book1.bin
+      - engines/book2.bin
+    min_weight: 1
+    selection: weighted_random
+    max_depth: 20
+  draw_or_resign:
+    resign_enabled: false
+    resign_score: -1000
+    resign_for_egtb_minus_two: true
+    resign_moves: 3
+    offer_draw_enabled: true
+    offer_draw_score: 0
+    offer_draw_for_egtb_zero: true
+    offer_draw_moves: 10
+    offer_draw_pieces: 10
+  online_moves:
+    max_out_of_book_moves: 10
+    max_retries: 2
+    chessdb_book:
+      enabled: false
+      min_time: 20
+      move_quality: good
+      min_depth: 20
+    lichess_cloud_analysis:
+      enabled: false
+      min_time: 20
+      move_quality: best
+      max_score_difference: 50
+      min_depth: 20
+      min_knodes: 0
+    lichess_opening_explorer:
+      enabled: false
+      min_time: 20
+      source: masters
+      player_name: ''
+      sort: winrate
+      min_games: 10
+    online_egtb:
+      enabled: false
+      min_time: 20
+      max_pieces: 7
+      source: lichess
+      move_quality: best
+  lichess_bot_tbs:
+    syzygy:
+      enabled: false
+      paths:
+      - engines/syzygy
+      max_pieces: 7
+      move_quality: best
+    gaviota:
+      enabled: false
+      paths:
+      - engines/gaviota
+      max_pieces: 5
+      min_dtm_to_consider_as_wdl_1: 120
+      move_quality: best
+  homemade_options: null
+  uci_options:
+    Hash: 512
+  silence_stderr: false
+  uci_ponder: false
+abort_time: 30
+fake_think_time: false
+rate_limiting_delay: 0
+move_overhead: 1000
+correspondence:
+  move_time: 60
+  checkin_period: 300
+  disconnect_time: 150
+  ponder: false
+  uci_ponder: false
+challenge:
+  concurrency: 1
+  sort_by: best
+  accept_bot: true
+  only_bot: false
+  max_increment: 20
+  min_increment: 0
+  max_base: 1800
+  min_base: 0
+  max_days: 14
+  min_days: 1
+  variants:
+  - standard
+  time_controls:
+  - bullet
+  - blitz
+  - rapid
+  - classical
+  modes:
+  - casual
+  - rated
+  bullet_requires_increment: false
+  block_list: []
+  allow_list: []
+greeting:
+  hello: Hi! I'm {me}. Good luck! Type !help for a list of commands I can respond
+    to.
+  goodbye: Good game!
+  hello_spectators: Hi! I'm {me}. Type !help for a list of commands I can respond
+    to.
+  goodbye_spectators: Thanks for watching!
+matchmaking:
+  allow_matchmaking: false
+  challenge_variant: random
+  challenge_timeout: 30
+  challenge_initial_time:
+  - 60
+  - 180
+  challenge_increment:
+  - 1
+  - 2
+  opponent_rating_difference: 300
+  opponent_allow_tos_violation: false
+  challenge_mode: random
+  challenge_filter: none
+  block_list: []
+  challenge_days:
+  - null
+  opponent_min_rating: 600
+  opponent_max_rating: 4000
+
+2023-07-17 17:16:20,339 config (config.py:243) DEBUG ====================
+2023-07-17 17:16:20,341 urllib3.connectionpool (connectionpool.py:1048) DEBUG Starting new HTTPS connection (1): lichess.org:443
+2023-07-17 17:16:20,456 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/token/test HTTP/1.1" 200 None
+2023-07-17 17:16:20,483 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "GET /api/account HTTP/1.1" 200 None
+2023-07-17 17:16:20,485 __main__ (lichess-bot.py:974) INFO Welcome beatrijs-bot!
+2023-07-17 17:16:20,486 __main__ (lichess-bot.py:217) INFO You're now connected to https://lichess.org/ and awaiting challenges.
+2023-07-17 17:16:20,768 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "GET /api/account/playing HTTP/1.1" 200 17
+2023-07-17 17:16:27,147 __main__ (lichess-bot.py:381) DEBUG Event: {'type': 'challenge', 'challenge': {'id': 'eIA9fB6h', 'url': 'https://lichess.org/eIA9fB6h', 'status': 'created', 'challenger': {'id': 'kwovadis7', 'name': 'Kwovadis7', 'title': None, 'rating': 1404, 'online': True, 'lag': 4}, 'destUser': {'id': 'beatrijs-bot', 'name': 'beatrijs-bot', 'title': 'BOT', 'rating': 2000, 'provisional': True, 'online': True}, 'variant': {'key': 'standard', 'name': 'Standard', 'short': 'Std'}, 'rated': False, 'speed': 'blitz', 'timeControl': {'type': 'clock', 'limit': 300, 'increment': 3, 'show': '5+3'}, 'color': 'random', 'finalColor': 'white', 'perf': {'icon': '\ue01d', 'name': 'Blitz'}}, 'compat': {'bot': True, 'board': True}}
+2023-07-17 17:16:27,148 __main__ (lichess-bot.py:432) INFO Accept Blitz casual challenge from Kwovadis7 (1404) (eIA9fB6h)
+2023-07-17 17:16:27,177 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/challenge/eIA9fB6h/accept HTTP/1.1" 200 11
+2023-07-17 17:16:27,178 __main__ (lichess-bot.py:264) INFO --- Process Queued. Count: 1. IDs: {'eIA9fB6h'}
+2023-07-17 17:16:27,178 __main__ (lichess-bot.py:381) DEBUG Event: {'type': 'gameStart', 'game': {'fullId': 'eIA9fB6hAHZk', 'gameId': 'eIA9fB6h', 'fen': 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1', 'color': 'black', 'lastMove': '', 'source': 'friend', 'status': {'id': 20, 'name': 'started'}, 'variant': {'key': 'standard', 'name': 'Standard'}, 'speed': 'blitz', 'perf': 'blitz', 'rated': False, 'hasMoved': False, 'opponent': {'id': 'kwovadis7', 'username': 'Kwovadis7', 'rating': 1404}, 'isMyTurn': False, 'secondsLeft': 300, 'compat': {'bot': True, 'board': True}, 'id': 'eIA9fB6h'}}
+2023-07-17 17:16:27,178 __main__ (lichess-bot.py:264) INFO --- Process Used. Count: 1. IDs: {'eIA9fB6h'}
+2023-07-17 17:16:27,187 urllib3.connectionpool (connectionpool.py:1048) DEBUG Starting new HTTPS connection (1): lichess.org:443
+2023-07-17 17:16:27,326 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "GET /api/bot/game/stream/eIA9fB6h HTTP/1.1" 200 None
+2023-07-17 17:16:27,327 __mp_main__ (lichess-bot.py:571) DEBUG Initial state: {'id': 'eIA9fB6h', 'variant': {'key': 'standard', 'name': 'Standard', 'short': 'Std'}, 'speed': 'blitz', 'perf': {'name': 'Blitz'}, 'rated': False, 'createdAt': 1689606987165, 'white': {'id': 'kwovadis7', 'name': 'Kwovadis7', 'title': None, 'rating': 1404}, 'black': {'id': 'beatrijs-bot', 'name': 'beatrijs-bot', 'title': 'BOT', 'rating': 2000, 'provisional': True}, 'initialFen': 'startpos', 'clock': {'initial': 300000, 'increment': 3000}, 'type': 'gameFull', 'state': {'type': 'gameState', 'moves': '', 'wtime': 300000, 'btime': 300000, 'winc': 3000, 'binc': 3000, 'status': 'started'}}
+2023-07-17 17:16:27,327 engine_wrapper (engine_wrapper.py:63) DEBUG Starting engine: ['/home/dewaeq/dev/beatrijs-lila/engines/beatrijs']
+2023-07-17 17:16:27,328 asyncio (selector_events.py:54) DEBUG Using selector: EpollSelector
+2023-07-17 17:16:27,329 chess.engine (engine.py:124) DEBUG Using PidfdChildWatcher
+2023-07-17 17:16:27,329 chess.engine (engine.py:1001) DEBUG <UciProtocol (pid=142678)>: Connection made
+2023-07-17 17:16:27,330 chess.engine (engine.py:1023) DEBUG <UciProtocol (pid=142678)>: << uci
+2023-07-17 17:16:27,371 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> id name beatrijs author Dewaeq
+2023-07-17 17:16:27,372 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> option name Hash type spin default 128 min 1 max 16384
+2023-07-17 17:16:27,372 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> uciok
+2023-07-17 17:16:27,372 chess.engine (engine.py:1023) DEBUG <UciProtocol (pid=142678)>: << setoption name Hash value 512
+2023-07-17 17:16:27,372 __mp_main__ (lichess-bot.py:577) DEBUG The engine for game eIA9fB6h has pid=142678
+2023-07-17 17:16:27,372 __mp_main__ (lichess-bot.py:580) INFO +++ https://lichess.org/eIA9fB6h/black Blitz vs Kwovadis7 (1404) (eIA9fB6h)
+2023-07-17 17:16:28,603 __mp_main__ (lichess-bot.py:693) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e4', 'wtime': 300000, 'btime': 300000, 'winc': 3000, 'binc': 3000, 'status': 'started'}
+2023-07-17 17:16:28,604 conversation (conversation.py:82) INFO *** https://lichess.org/eIA9fB6h/black [player] beatrijs-bot: Hi! I'm beatrijs-bot. Good luck! Type !help for a list of commands I can respond to.
+2023-07-17 17:16:28,606 urllib3.connectionpool (connectionpool.py:1048) DEBUG Starting new HTTPS connection (2): lichess.org:443
+2023-07-17 17:16:28,726 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/eIA9fB6h/chat HTTP/1.1" 200 11
+2023-07-17 17:16:28,726 conversation (conversation.py:82) INFO *** https://lichess.org/eIA9fB6h/black [spectator] beatrijs-bot: Hi! I'm beatrijs-bot. Type !help for a list of commands I can respond to.
+2023-07-17 17:16:28,750 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/eIA9fB6h/chat HTTP/1.1" 200 11
+2023-07-17 17:16:28,751 __mp_main__ (lichess-bot.py:684) INFO 
+2023-07-17 17:16:28,751 __mp_main__ (lichess-bot.py:685) INFO move: 1
+2023-07-17 17:16:28,751 engine_wrapper (engine_wrapper.py:646) INFO Searching for time 10000 for game eIA9fB6h
+2023-07-17 17:16:28,752 chess.engine (engine.py:1023) DEBUG <UciProtocol (pid=142678)>: << ucinewgame
+2023-07-17 17:16:28,752 chess.engine (engine.py:1023) DEBUG <UciProtocol (pid=142678)>: << isready
+2023-07-17 17:16:28,852 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> readyok
+2023-07-17 17:16:28,853 chess.engine (engine.py:1023) DEBUG <UciProtocol (pid=142678)>: << position startpos moves e2e4
+2023-07-17 17:16:28,853 chess.engine (engine.py:1023) DEBUG <UciProtocol (pid=142678)>: << go movetime 10000
+2023-07-17 17:16:28,854 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 1 seldepth 4 score cp -10 nodes 26 time 0 nps 557963 hashfull 0 pv e7e5 
+2023-07-17 17:16:28,854 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 2 seldepth 7 score cp -3 nodes 95 time 0 nps 585166 hashfull 0 pv d7d5 d2d3 
+2023-07-17 17:16:28,854 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 3 seldepth 7 score cp -15 nodes 152 time 0 nps 614069 hashfull 0 pv d7d5 e4e5 d5d4 
+2023-07-17 17:16:28,854 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 4 seldepth 7 score cp -17 nodes 267 time 0 nps 637439 hashfull 0 pv d7d5 e4d5 d8d5 d2d3 
+2023-07-17 17:16:28,855 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 5 seldepth 10 score cp -39 nodes 1403 time 2 nps 699203 hashfull 0 pv e7e5 b1c3 d7d6 d2d3 a7a6 
+2023-07-17 17:16:28,857 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 6 seldepth 10 score cp -41 nodes 2796 time 3 nps 738498 hashfull 0 pv e7e5 d2d4 d7d6 h2h3 e5d4 d1d4 
+2023-07-17 17:16:28,861 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 7 seldepth 13 score cp -26 nodes 4897 time 7 nps 654874 hashfull 0 pv e7e5 d2d4 d7d5 b1c3 d5e4 d4e5 d8d1 
+2023-07-17 17:16:28,871 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 8 seldepth 14 score cp -13 nodes 12191 time 17 nps 702737 hashfull 0 pv d7d5 e4d5 g8f6 b1c3 f6d5 g1e2 e7e6 d2d3 
+2023-07-17 17:16:28,878 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 9 seldepth 14 score cp -15 nodes 18609 time 24 nps 771771 hashfull 0 pv d7d5 e4e5 d5d4 d2d3 b8c6 g1f3 e7e6 c2c3 h7h6 
+2023-07-17 17:16:28,885 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 10 seldepth 15 score cp -6 nodes 26675 time 31 nps 846918 hashfull 0 pv d7d5 e4e5 d5d4 h2h3 e7e6 a2a3 g8e7 g1f3 h7h6 d2d3 
+2023-07-17 17:16:28,894 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 11 seldepth 16 score cp -10 nodes 36131 time 40 nps 897032 hashfull 0 pv d7d5 e4e5 d5d4 h2h3 e7e6 d2d3 g8e7 b1d2 e7d5 a2a3 h7h6 
+2023-07-17 17:16:29,006 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 12 seldepth 19 score cp -37 nodes 158647 time 151 nps 1043740 hashfull 0 pv e7e6 d2d4 d7d5 e4e5 b8c6 b1c3 g8e7 g1e2 a7a6 a2a3 h7h6 h2h3 
+2023-07-17 17:16:29,095 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 13 seldepth 19 score cp -45 nodes 257324 time 241 nps 1063505 hashfull 0 pv e7e5 b1c3 b8c6 g1f3 f8c5 c3a4 c5e7 d2d4 e5d4 f3d4 d7d6 d4c6 b7c6 
+2023-07-17 17:16:29,184 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 14 seldepth 20 score cp -18 nodes 352463 time 330 nps 1065537 hashfull 0 pv e7e5 b1c3 b8c6 g1f3 f8c5 f1c4 g8f6 a2a3 a7a5 d2d3 d7d6 e1g1 e8g8 h2h3 
+2023-07-17 17:16:29,371 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 15 seldepth 22 score cp -51 nodes 554559 time 517 nps 1071938 hashfull 0 pv e7e5 b1c3 d7d6 g1f3 g8e7 d2d4 e5d4 f3d4 b8d7 h2h3 d7e5 c1e3 h7h6 a2a3 a7a6 
+2023-07-17 17:16:29,673 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 16 seldepth 24 score cp -35 nodes 876228 time 819 nps 1068748 hashfull 0 pv e7e5 g1f3 d7d5 e4d5 d8d5 b1c3 d5e6 f1b5 c7c6 b5e2 g8f6 d2d3 f8d6 e1g1 e8g8 d3d4 
+2023-07-17 17:16:30,058 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 17 seldepth 24 score cp -21 nodes 1287102 time 1204 nps 1068578 hashfull 0 pv e7e5 d2d4 e5d4 d1d4 b8c6 d4e3 g8f6 g1f3 d7d6 b1c3 h7h6 h2h3 c8e6 c3d5 a7a6 c2c4 f6d5 
+2023-07-17 17:16:30,204 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 18 seldepth 24 score cp -10 nodes 1442473 time 1350 nps 1068205 hashfull 0 pv e7e5 d2d4 e5d4 d1d4 b8c6 d4e3 g8f6 g1f3 d7d6 b1c3 h7h6 c1d2 f6g4 e3e2 c6e5 e1c1 a7a6 h2h4 
+2023-07-17 17:16:30,411 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 19 seldepth 25 score cp -11 nodes 1664772 time 1557 nps 1068586 hashfull 0 pv e7e5 d2d4 e5d4 d1d4 b8c6 d4e3 g8f6 b1d2 d7d6 g1e2 a7a6 a2a3 h7h6 d2c4 f8e7 e2d4 e8g8 d4c6 b7c6 
+2023-07-17 17:16:30,698 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 20 seldepth 27 score cp -10 nodes 1970063 time 1844 nps 1068084 hashfull 0 pv e7e5 d2d4 e5d4 d1d4 b8c6 d4e3 g8f6 b1d2 d7d6 g1f3 c8e6 f1e2 f6g4 e3f4 d8f6 f4f6 g4f6 e1g1 e8c8 a2a3 
+2023-07-17 17:16:31,955 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 21 seldepth 28 score cp -27 nodes 3329461 time 3101 nps 1073672 hashfull 0 pv e7e5 d2d4 e5d4 d1d4 b8c6 d4e3 g8f6 b1c3 d7d6 g1f3 c6b4 e3d2 d8e7 d2e2 b4c6 a2a3 c8e6 c1f4 e8c8 e1c1 h7h6 
+2023-07-17 17:16:33,850 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 22 seldepth 30 score cp -3 nodes 5379622 time 4996 nps 1076776 hashfull 0 pv e7e5 d2d4 e5d4 d1d4 b8c6 d4e3 f8b4 b1d2 d7d6 g1f3 g8f6 f1e2 e8g8 e1g1 b4c5 e3b3 h7h6 
+2023-07-17 17:16:34,838 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 23 seldepth 30 score cp -12 nodes 6432088 time 5984 nps 1074785 hashfull 0 pv e7e5 d2d4 e5d4 d1d4 b8c6 d4e3 f8b4 b1d2 d7d6 g1f3 g8f6 f1c4 b4c5 e3c3 e8g8 e1g1 h7h6 a2a3 a7a6 b2b4 c5b6 c1b2 d8e7 
+2023-07-17 17:16:35,883 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 24 seldepth 30 score cp -8 nodes 7544678 time 7029 nps 1073345 hashfull 0 pv e7e5 d2d4 e5d4 d1d4 b8c6 d4e3 f8b4 b1d2 d7d6 g1f3 g8f6 f1c4 b4c5 e3c3 e8g8 e1g1 h7h6 a2a3 a7a6 b2b4 c5b6 c1b2 d8e7 e4e5 
+2023-07-17 17:16:38,854 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> bestmove e7e5
+2023-07-17 17:16:38,855 engine_wrapper (engine_wrapper.py:314) INFO Evaluation: -0.08
+2023-07-17 17:16:38,856 engine_wrapper (engine_wrapper.py:314) INFO Depth: 24
+2023-07-17 17:16:38,856 engine_wrapper (engine_wrapper.py:314) INFO Nodes: 7.5M
+2023-07-17 17:16:38,856 engine_wrapper (engine_wrapper.py:314) INFO Speed: 1.1Mnps
+2023-07-17 17:16:38,856 engine_wrapper (engine_wrapper.py:314) INFO Pv: 1...e5 2. d4 exd4 3. Qxd4 Nc6 4. Qe3 Bb4+ 5. Nd2 d6 6. Nf3 Nf6 7. Bc4 Bc5 8. Qc3 O-O 9. O-O h6 10. a3 a6 11. b4 Bb6 12. Bb2 Qe7 13. e5
+2023-07-17 17:16:38,858 urllib3.connectionpool (connectionpool.py:292) DEBUG Resetting dropped connection: lichess.org
+2023-07-17 17:16:38,983 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/eIA9fB6h/move/e7e5?offeringDraw=false HTTP/1.1" 200 11
+2023-07-17 17:16:38,984 __mp_main__ (lichess-bot.py:693) DEBUG Game state: {'type': 'chatLine', 'room': 'player', 'username': 'beatrijs-bot', 'text': "Hi! I'm beatrijs-bot. Good luck! Type !help for a list of commands I can respond to."}
+2023-07-17 17:16:38,984 conversation (conversation.py:41) INFO *** https://lichess.org/eIA9fB6h/black [player] beatrijs-bot: b"Hi! I'm beatrijs-bot. Good luck! Type !help for a list of commands I can respond to."
+2023-07-17 17:16:38,984 __mp_main__ (lichess-bot.py:693) DEBUG Game state: {'type': 'chatLine', 'room': 'spectator', 'username': 'beatrijs-bot', 'text': "Hi! I'm beatrijs-bot. Type !help for a list of commands I can respond to."}
+2023-07-17 17:16:38,985 conversation (conversation.py:41) INFO *** https://lichess.org/eIA9fB6h/black [spectator] beatrijs-bot: b"Hi! I'm beatrijs-bot. Type !help for a list of commands I can respond to."
+2023-07-17 17:16:38,986 __mp_main__ (lichess-bot.py:693) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e4 e7e5', 'wtime': 300000, 'btime': 300000, 'winc': 3000, 'binc': 3000, 'status': 'started'}
+2023-07-17 17:16:41,362 __mp_main__ (lichess-bot.py:693) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e4 e7e5 g1f3', 'wtime': 300650, 'btime': 300000, 'winc': 3000, 'binc': 3000, 'status': 'started'}
+2023-07-17 17:16:41,363 __mp_main__ (lichess-bot.py:684) INFO 
+2023-07-17 17:16:41,363 __mp_main__ (lichess-bot.py:685) INFO move: 2
+2023-07-17 17:16:41,363 engine_wrapper (engine_wrapper.py:664) INFO Searching for wtime 300650 btime 299000 for game eIA9fB6h
+2023-07-17 17:16:41,364 chess.engine (engine.py:1023) DEBUG <UciProtocol (pid=142678)>: << position startpos moves e2e4 e7e5 g1f3
+2023-07-17 17:16:41,364 chess.engine (engine.py:1023) DEBUG <UciProtocol (pid=142678)>: << go wtime 300650 btime 299000 winc 3000 binc 3000
+2023-07-17 17:16:41,365 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 1 seldepth 1 score cp -9 nodes 10 time 0 nps 218885 hashfull 0 pv b8c6 
+2023-07-17 17:16:41,365 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 2 seldepth 7 score cp -50 nodes 111 time 0 nps 394480 hashfull 0 pv d7d6 d2d4 
+2023-07-17 17:16:41,365 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 3 seldepth 7 score cp -3 nodes 198 time 0 nps 385406 hashfull 0 pv d7d5 d2d3 d5e4 
+2023-07-17 17:16:41,366 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 4 seldepth 7 score cp -17 nodes 318 time 0 nps 410551 hashfull 0 pv d7d5 d2d4 d5e4 f3e5 
+2023-07-17 17:16:41,366 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 5 seldepth 10 score cp -28 nodes 483 time 1 nps 420425 hashfull 0 pv d7d5 e4d5 d8d5 b1c3 d5e6 
+2023-07-17 17:16:41,367 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 6 seldepth 10 score cp -22 nodes 1118 time 2 nps 472731 hashfull 0 pv g8f6 d2d4 d7d5 d4e5 f6e4 h2h3 
+2023-07-17 17:16:41,372 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 7 seldepth 12 score cp -13 nodes 3511 time 7 nps 484918 hashfull 0 pv b8c6 d2d4 e5d4 f3d4 g8f6 f2f3 h7h6 
+2023-07-17 17:16:41,377 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 8 seldepth 15 score cp -8 nodes 5924 time 12 nps 490026 hashfull 0 pv b8c6 b1c3 f8c5 d2d3 g8f6 c3d5 e8g8 h2h3 
+2023-07-17 17:16:41,379 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 9 seldepth 15 score cp -10 nodes 7922 time 14 nps 561262 hashfull 0 pv b8c6 b1c3 f8c5 f1c4 g8e7 d2d3 e8g8 e1g1 d7d6 
+2023-07-17 17:16:41,381 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 10 seldepth 15 score cp -8 nodes 10864 time 16 nps 644729 hashfull 0 pv b8c6 b1c3 f8c5 f1c4 g8e7 d2d3 e8g8 e1g1 d7d6 h2h3 
+2023-07-17 17:16:41,388 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 11 seldepth 17 score cp -8 nodes 16936 time 22 nps 737764 hashfull 0 pv b8c6 b1c3 f8c5 f1c4 d7d6 e1g1 g8f6 d2d3 e8g8 a2a3 h7h6 
+2023-07-17 17:16:41,393 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 12 seldepth 17 score cp -8 nodes 22279 time 28 nps 777219 hashfull 0 pv b8c6 b1c3 f8c5 f1c4 d7d6 d2d3 g8f6 e1g1 e8g8 a2a3 h7h6 h2h3 
+2023-07-17 17:16:41,404 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 13 seldepth 21 score cp -13 nodes 32850 time 39 nps 837467 hashfull 0 pv b8c6 b1c3 g8f6 d2d4 e5d4 f3d4 f8b4 c1g5 e8g8 a2a3 b4c3 b2c3 d7d5 
+2023-07-17 17:16:41,443 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 14 seldepth 21 score cp -17 nodes 71305 time 77 nps 915120 hashfull 0 pv b8c6 b1c3 g8f6 h2h3 f8b4 f1c4 e8g8 e1g1 d7d6 d2d3 c8e6 c4e6 f7e6 d3d4 
+2023-07-17 17:16:41,480 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 15 seldepth 22 score cp -24 nodes 107617 time 115 nps 932254 hashfull 0 pv b8c6 b1c3 g8f6 h2h3 f8b4 f1c4 e8g8 e1g1 d7d6 d2d3 b4c5 c3d5 h7h6 a2a3 c8e6 
+2023-07-17 17:16:41,557 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 16 seldepth 24 score cp -13 nodes 183995 time 192 nps 957028 hashfull 0 pv b8c6 b1c3 g8f6 d2d4 e5d4 f3d4 f8b4 d1d3 e8g8 c1f4 d7d5 d4c6 b7c6 e4d5 c6d5 e1c1 
+2023-07-17 17:16:41,817 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 17 seldepth 24 score cp -28 nodes 459663 time 452 nps 1016080 hashfull 0 pv b8c6 b1c3 g8f6 f1b5 a7a6 b5c6 d7c6 f3e5 f8d6 d2d4 c6c5 c1e3 e8g8 e1g1 c5d4 e3d4 h7h6 
+2023-07-17 17:16:42,076 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 18 seldepth 25 score cp -5 nodes 735053 time 711 nps 1033459 hashfull 0 pv b8c6 b1c3 g8f6 d2d4 e5d4 f3d4 f8b4 d1d3 e8g8 c1f4 d7d5 d4c6 b7c6 a2a3 b4a5 b2b4 g7g5 b4a5 
+2023-07-17 17:16:42,460 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 19 seldepth 27 score cp 7 nodes 1139177 time 1095 nps 1040123 hashfull 0 pv b8c6 b1c3 g8f6 d2d4 e5d4 f3d4 f8b4 f2f3 e8g8 a2a3 b4c3 b2c3 h7h6 c3c4 d7d6 d4c6 b7c6 c1e3 a7a5 
+2023-07-17 17:16:43,191 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 20 seldepth 28 score cp 10 nodes 1921365 time 1825 nps 1052242 hashfull 0 pv b8c6 b1c3 g8f6 h2h3 h7h6 a2a4 a7a5 f1b5 f8b4 e1g1 e8g8 d2d3 d7d6 c3d5 b4c5 c1e3 c5e3 d5e3 c6d4 f3d4 
+2023-07-17 17:16:45,024 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 21 seldepth 32 score cp 8 nodes 3903755 time 3659 nps 1066707 hashfull 0 pv b8c6 b1c3 g8f6 h2h3 h7h6 f1d3 d7d5 e4d5 f6d5 e1g1 f8e7 d3e4 c8e6 d2d3 e8g8 c3d5 e6d5 c1d2 a7a5 a2a4 d5e4 
+2023-07-17 17:16:45,929 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 22 seldepth 32 score cp 4 nodes 4885115 time 4563 nps 1070377 hashfull 0 pv b8c6 b1c3 g8f6 h2h3 h7h6 f1b5 c6d4 b5d3 d7d6 e1g1 c8d7 a2a4 c7c6 b2b4 d8c7 f3d4 e5d4 c3e2 c6c5 e4e5 d6e5 b4c5 
+2023-07-17 17:16:46,912 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 23 seldepth 32 score cp 1 nodes 5933814 time 5546 nps 1069760 hashfull 0 pv b8c6 b1c3 g8f6 h2h3 h7h6 f1b5 c6d4 b5d3 d7d6 e1g1 a7a6 c3d5 
+2023-07-17 17:16:48,481 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 24 seldepth 33 score cp 0 nodes 7633823 time 7115 nps 1072779 hashfull 0 pv b8c6 b1c3 g8f6 h2h3 h7h6 f1b5 c6d4 b5d3 d7d6 e1g1 f6d7 c3b5 d4c6 b5c3 c6d4 c3b5 d4c6 b5c3 c6d4 c3b5 d4c6 b5c3 c6d4 c3b5 
+2023-07-17 17:16:50,509 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 25 seldepth 33 score cp 0 nodes 9820544 time 9144 nps 1073927 hashfull 0 pv b8c6 b1c3 g8f6 h2h3 h7h6 f1b5 c6d4 b5d3 d7d6 e1g1 f6d7 c3b5 d4c6 b5c3 c6d4 c3b5 d4c6 b5c3 c6d4 c3b5 d4c6 b5c3 c6d4 c3b5 d4c6 
+2023-07-17 17:16:51,331 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> bestmove b8c6
+2023-07-17 17:16:51,332 engine_wrapper (engine_wrapper.py:314) INFO Evaluation: 0.0
+2023-07-17 17:16:51,332 engine_wrapper (engine_wrapper.py:314) INFO Depth: 25
+2023-07-17 17:16:51,332 engine_wrapper (engine_wrapper.py:314) INFO Nodes: 9.8M
+2023-07-17 17:16:51,333 engine_wrapper (engine_wrapper.py:314) INFO Speed: 1.1Mnps
+2023-07-17 17:16:51,333 engine_wrapper (engine_wrapper.py:314) INFO Pv: 2...Nc6 3. Nc3 Nf6 4. h3 h6 5. Bb5 Nd4 6. Bd3 d6 7. O-O Nd7 8. Nb5 Nc6 9. Nc3 Nd4 10. Nb5 Nc6 11. Nc3 Nd4 12. Nb5 Nc6 13. Nc3 Nd4 14. Nb5 Nc6
+2023-07-17 17:16:51,334 urllib3.connectionpool (connectionpool.py:292) DEBUG Resetting dropped connection: lichess.org
+2023-07-17 17:16:51,458 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/eIA9fB6h/move/b8c6?offeringDraw=false HTTP/1.1" 200 11
+2023-07-17 17:16:51,461 __mp_main__ (lichess-bot.py:693) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e4 e7e5 g1f3 b8c6', 'wtime': 300650, 'btime': 292900, 'winc': 3000, 'binc': 3000, 'status': 'started'}
+2023-07-17 17:16:52,797 __mp_main__ (lichess-bot.py:693) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e4 e7e5 g1f3 b8c6 f1b5', 'wtime': 302340, 'btime': 292900, 'winc': 3000, 'binc': 3000, 'status': 'started'}
+2023-07-17 17:16:52,798 __mp_main__ (lichess-bot.py:684) INFO 
+2023-07-17 17:16:52,798 __mp_main__ (lichess-bot.py:685) INFO move: 3
+2023-07-17 17:16:52,798 engine_wrapper (engine_wrapper.py:664) INFO Searching for wtime 302340 btime 291900 for game eIA9fB6h
+2023-07-17 17:16:52,799 chess.engine (engine.py:1023) DEBUG <UciProtocol (pid=142678)>: << position startpos moves e2e4 e7e5 g1f3 b8c6 f1b5
+2023-07-17 17:16:52,799 chess.engine (engine.py:1023) DEBUG <UciProtocol (pid=142678)>: << go wtime 302340 btime 291900 winc 3000 binc 3000
+2023-07-17 17:16:52,800 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 1 seldepth 1 score cp 19 nodes 23 time 0 nps 402252 hashfull 0 pv g8f6 
+2023-07-17 17:16:52,800 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 2 seldepth 7 score cp 75 nodes 147 time 0 nps 438145 hashfull 0 pv g8f6 d2d4 
+2023-07-17 17:16:52,801 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 3 seldepth 7 score cp 75 nodes 195 time 0 nps 422944 hashfull 0 pv g8f6 d2d4 e5d4 
+2023-07-17 17:16:52,801 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 4 seldepth 8 score cp 26 nodes 444 time 1 nps 442129 hashfull 0 pv g8f6 b1c3 c6d4 b5a4 
+2023-07-17 17:16:52,802 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 5 seldepth 11 score cp 2 nodes 1171 time 2 nps 433545 hashfull 0 pv c6d4 f3d4 e5d4 e1g1 a7a6 
+2023-07-17 17:16:52,806 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 6 seldepth 11 score cp 22 nodes 2880 time 5 nps 485254 hashfull 0 pv c6d4 a2a4 d4f3 d1f3 a7a6 b5d3 
+2023-07-17 17:16:52,808 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 7 seldepth 11 score cp 29 nodes 4294 time 8 nps 507853 hashfull 0 pv c6d4 b5f1 d7d6 b1c3 g8e7 d2d3 h7h6 
+2023-07-17 17:16:52,810 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 8 seldepth 11 score cp 31 nodes 5522 time 10 nps 526288 hashfull 0 pv c6d4 b5f1 d7d6 b1c3 g8e7 d2d3 h7h6 h2h3 
+2023-07-17 17:16:52,822 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 9 seldepth 15 score cp 22 nodes 11976 time 22 nps 539623 hashfull 0 pv c6d4 a2a4 d4b5 a4b5 d7d5 d2d4 d5e4 f3e5 h7h6 
+2023-07-17 17:16:52,843 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 10 seldepth 15 score cp 9 nodes 23991 time 43 nps 549197 hashfull 0 pv c6d4 a2a4 a7a6 b5c4 d8f6 d2d3 d4f3 d1f3 f6f3 g2f3 
+2023-07-17 17:16:52,882 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 11 seldepth 17 score cp 16 nodes 63015 time 82 nps 763575 hashfull 0 pv a7a6 b5c6 d7c6 d2d3 f8d6 b1d2 b7b5 e1g1 g8f6 d3d4 e5d4 
+2023-07-17 17:16:52,891 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 12 seldepth 17 score cp 16 nodes 72081 time 91 nps 791898 hashfull 0 pv a7a6 b5c6 d7c6 d2d3 f8d6 b1d2 b7b5 e1g1 g8f6 d3d4 e5d4 f3d4 
+2023-07-17 17:16:52,924 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 13 seldepth 17 score cp 21 nodes 107985 time 124 nps 868292 hashfull 0 pv a7a6 b5c6 d7c6 d2d3 d8f6 c1g5 f6e6 b1d2 g8f6 e1g1 c6c5 h2h3 h7h6 
+2023-07-17 17:16:52,947 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 14 seldepth 20 score cp 18 nodes 132697 time 147 nps 898628 hashfull 0 pv a7a6 b5c6 d7c6 d2d3 d8f6 c1g5 f6e6 b1d2 g8f6 e1g1 c6c5 d2c4 h7h6 g5f6 
+2023-07-17 17:16:53,112 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 15 seldepth 22 score cp 37 nodes 307075 time 311 nps 984711 hashfull 0 pv a7a6 b5c6 d7c6 d2d3 d8f6 c1g5 f6e6 b1d2 g8f6 e1g1 h7h6 g5h4 c8d7 d3d4 e5d4 
+2023-07-17 17:16:53,264 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 16 seldepth 22 score cp 20 nodes 470303 time 464 nps 1012283 hashfull 0 pv a7a6 b5c6 d7c6 d2d3 d8f6 e1g1 g8e7 c1g5 f6e6 b1d2 h7h6 g5e3 c8d7 d3d4 e5d4 f3d4 
+2023-07-17 17:16:54,561 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 17 seldepth 27 score cp 22 nodes 1877743 time 1761 nps 1066031 hashfull 0 pv a7a6 b5a4 g8f6 d2d3 f8c5 b1d2 b7b5 a4b3 e8g8 a2a4 b5b4 e1g1 d7d5 h2h3 c6d4 f3d4 e5d4 
+2023-07-17 17:16:54,700 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 18 seldepth 27 score cp 18 nodes 2025183 time 1899 nps 1065938 hashfull 0 pv a7a6 b5a4 g8f6 d2d3 f8c5 e1g1 e8g8 b1c3 d7d6 a4c6 b7c6 c1e3 c5e3 f2e3 c8e6 d3d4 e5d4 d1d4 
+2023-07-17 17:16:54,921 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 19 seldepth 27 score cp 18 nodes 2260576 time 2121 nps 1065489 hashfull 0 pv a7a6 b5a4 g8f6 d2d3 f8c5 e1g1 e8g8 b1c3 d7d6 a4c6 b7c6 c1e3 c5e3 f2e3 c8e6 d3d4 e5d4 d1d4 h7h6 
+2023-07-17 17:16:55,495 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 20 seldepth 30 score cp 23 nodes 2877939 time 2695 nps 1067783 hashfull 0 pv a7a6 b5a4 g8f6 d2d3 f8c5 c1e3 c5e3 f2e3 d7d6 a4c6 b7c6 b1d2 e8g8 e1g1 a8b8 d1b1 c8e6 a2a3 h7h6 a3a4 
+2023-07-17 17:16:56,185 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 21 seldepth 30 score cp 19 nodes 3617413 time 3385 nps 1068472 hashfull 0 pv a7a6 b5a4 g8f6 d2d3 f8c5 c1e3 c5e3 f2e3 d7d6 a4c6 b7c6 b1c3 e8g8 e1g1 h7h6 d3d4 e5d4 e3d4 c8e6 d4d5 c6d5 
+2023-07-17 17:16:57,131 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 22 seldepth 34 score cp 19 nodes 4640554 time 4331 nps 1071393 hashfull 0 pv a7a6 b5a4 g8f6 d2d3 f8c5 e1g1 e8g8 b1c3 d7d6 a4c6 b7c6 c1e3 c5e3 f2e3 h7h6 d3d4 e5d4 e3d4 c8e6 d4d5 c6d5 e4d5 
+2023-07-17 17:16:59,212 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 23 seldepth 34 score cp 15 nodes 6865593 time 6412 nps 1070709 hashfull 0 pv a7a6 b5a4 g8f6 d2d3 f8c5 b1c3 e8g8 c1e3 c5e3 f2e3 d7d6 e1g1 c8g4 a4c6 b7c6 h2h3 g4d7 d1d2 d8e7 d3d4 e5d4 d2d4 h7h6 
+2023-07-17 17:17:01,927 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 24 seldepth 34 score cp 11 nodes 9777400 time 9127 nps 1071206 hashfull 0 pv a7a6 b5a4 g8f6 d2d3 f8c5 b1c3 e8g8 c1e3 c5e3 f2e3 d7d6 e1g1 c8g4 a4c6 b7c6 h2h3 g4d7 d3d4 e5d4 e3d4 
+2023-07-17 17:17:02,530 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> bestmove a7a6
+2023-07-17 17:17:02,531 engine_wrapper (engine_wrapper.py:314) INFO Evaluation: 0.11
+2023-07-17 17:17:02,531 engine_wrapper (engine_wrapper.py:314) INFO Depth: 24
+2023-07-17 17:17:02,531 engine_wrapper (engine_wrapper.py:314) INFO Nodes: 9.8M
+2023-07-17 17:17:02,532 engine_wrapper (engine_wrapper.py:314) INFO Speed: 1.1Mnps
+2023-07-17 17:17:02,532 engine_wrapper (engine_wrapper.py:314) INFO Pv: 3...a6 4. Ba4 Nf6 5. d3 Bc5 6. Nc3 O-O 7. Be3 Bxe3 8. fxe3 d6 9. O-O Bg4 10. Bxc6 bxc6 11. h3 Bd7 12. d4 exd4 13. exd4
+2023-07-17 17:17:02,533 urllib3.connectionpool (connectionpool.py:292) DEBUG Resetting dropped connection: lichess.org
+2023-07-17 17:17:02,728 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/eIA9fB6h/move/a7a6?offeringDraw=false HTTP/1.1" 200 11
+2023-07-17 17:17:02,729 __mp_main__ (lichess-bot.py:693) DEBUG Game state: {'type': 'chatLine', 'room': 'player', 'username': 'Kwovadis7', 'text': '!help'}
+2023-07-17 17:17:02,730 conversation (conversation.py:41) INFO *** https://lichess.org/eIA9fB6h/black [player] Kwovadis7: b'!help'
+2023-07-17 17:17:02,730 conversation (conversation.py:82) INFO *** https://lichess.org/eIA9fB6h/black [player] beatrijs-bot: Supported commands: !wait (wait a minute for my first move), !name, !howto, !eval, !queue
+2023-07-17 17:17:02,753 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/eIA9fB6h/chat HTTP/1.1" 200 11
+2023-07-17 17:17:02,754 __mp_main__ (lichess-bot.py:693) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e4 e7e5 g1f3 b8c6 f1b5 a7a6', 'wtime': 302340, 'btime': 285970, 'winc': 3000, 'binc': 3000, 'status': 'started'}
+2023-07-17 17:17:02,765 __mp_main__ (lichess-bot.py:693) DEBUG Game state: {'type': 'chatLine', 'room': 'player', 'username': 'beatrijs-bot', 'text': 'Supported commands: !wait (wait a minute for my first move), !name, !howto, !eval, !queue'}
+2023-07-17 17:17:02,766 conversation (conversation.py:41) INFO *** https://lichess.org/eIA9fB6h/black [player] beatrijs-bot: b'Supported commands: !wait (wait a minute for my first move), !name, !howto, !eval, !queue'
+2023-07-17 17:17:11,250 __mp_main__ (lichess-bot.py:693) DEBUG Game state: {'type': 'chatLine', 'room': 'player', 'username': 'Kwovadis7', 'text': '!eval'}
+2023-07-17 17:17:11,250 conversation (conversation.py:41) INFO *** https://lichess.org/eIA9fB6h/black [player] Kwovadis7: b'!eval'
+2023-07-17 17:17:11,251 conversation (conversation.py:82) INFO *** https://lichess.org/eIA9fB6h/black [player] beatrijs-bot: I don't tell that to my opponent, sorry.
+2023-07-17 17:17:11,276 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/eIA9fB6h/chat HTTP/1.1" 200 11
+2023-07-17 17:17:11,277 __mp_main__ (lichess-bot.py:693) DEBUG Game state: {'type': 'chatLine', 'room': 'player', 'username': 'beatrijs-bot', 'text': "I don't tell that to my opponent, sorry."}
+2023-07-17 17:17:11,278 conversation (conversation.py:41) INFO *** https://lichess.org/eIA9fB6h/black [player] beatrijs-bot: b"I don't tell that to my opponent, sorry."
+2023-07-17 17:17:18,496 __mp_main__ (lichess-bot.py:693) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6', 'wtime': 289680, 'btime': 285970, 'winc': 3000, 'binc': 3000, 'status': 'started'}
+2023-07-17 17:17:18,496 __mp_main__ (lichess-bot.py:684) INFO 
+2023-07-17 17:17:18,496 __mp_main__ (lichess-bot.py:685) INFO move: 4
+2023-07-17 17:17:18,497 engine_wrapper (engine_wrapper.py:664) INFO Searching for wtime 289680 btime 284970 for game eIA9fB6h
+2023-07-17 17:17:18,497 chess.engine (engine.py:1023) DEBUG <UciProtocol (pid=142678)>: << position startpos moves e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6
+2023-07-17 17:17:18,498 chess.engine (engine.py:1023) DEBUG <UciProtocol (pid=142678)>: << go wtime 289680 btime 284970 winc 3000 binc 3000
+2023-07-17 17:17:18,498 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 1 seldepth 2 score cp -5 nodes 28 time 0 nps 583807 hashfull 0 pv d7c6 
+2023-07-17 17:17:18,498 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 2 seldepth 3 score cp -5 nodes 61 time 0 nps 613694 hashfull 0 pv d7c6 f3e5 
+2023-07-17 17:17:18,499 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 3 seldepth 4 score cp -7 nodes 109 time 0 nps 675190 hashfull 0 pv d7c6 f3e5 d8d4 
+2023-07-17 17:17:18,499 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 4 seldepth 6 score cp 68 nodes 193 time 0 nps 694479 hashfull 0 pv d7c6 e1g1 g8f6 d2d3 
+2023-07-17 17:17:18,500 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 5 seldepth 6 score cp 66 nodes 421 time 0 nps 730877 hashfull 0 pv d7c6 b1c3 f8d6 d2d4 e5d4 
+2023-07-17 17:17:18,500 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 6 seldepth 6 score cp 66 nodes 666 time 0 nps 720936 hashfull 0 pv d7c6 b1c3 f8d6 d2d4 e5d4 f3d4 
+2023-07-17 17:17:18,501 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 7 seldepth 10 score cp 46 nodes 1715 time 2 nps 771320 hashfull 0 pv d7c6 b1c3 f8d6 e1g1 g8h6 d2d3 e8g8 
+2023-07-17 17:17:18,505 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 8 seldepth 10 score cp 42 nodes 4170 time 7 nps 573843 hashfull 0 pv d7c6 e1g1 d8d6 b1c3 g8f6 d2d3 c8e6 h2h3 
+2023-07-17 17:17:18,507 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 9 seldepth 13 score cp 34 nodes 5611 time 9 nps 611063 hashfull 0 pv d7c6 e1g1 d8d6 b1c3 g8f6 d2d3 c6c5 c1e3 h7h6 
+2023-07-17 17:17:18,513 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 10 seldepth 13 score cp 45 nodes 9916 time 14 nps 680553 hashfull 0 pv d7c6 e1g1 d8d6 b1c3 g8f6 d2d3 c8e6 c1e3 e8c8 h2h3 
+2023-07-17 17:17:18,524 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 11 seldepth 15 score cp 34 nodes 19865 time 26 nps 759495 hashfull 0 pv d7c6 e1g1 d8d6 b1c3 g8f6 d2d3 c8d7 c1e3 e8c8 h2h3 h7h6 
+2023-07-17 17:17:18,543 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 12 seldepth 17 score cp 47 nodes 38896 time 45 nps 861586 hashfull 0 pv d7c6 e1g1 g8f6 d2d3 d8d6 b1d2 c8e6 d2c4 e6c4 d3c4 f6e4 d1d6 
+2023-07-17 17:17:18,601 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 13 seldepth 21 score cp 17 nodes 98631 time 103 nps 954515 hashfull 0 pv d7c6 e1g1 g8f6 d2d3 f8d6 b1d2 e8g8 d2c4 f8e8 c4d6 d8d6 c1e3 c6c5 
+2023-07-17 17:17:18,628 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 14 seldepth 21 score cp 17 nodes 124849 time 129 nps 963274 hashfull 0 pv d7c6 e1g1 g8f6 d2d3 f8d6 b1d2 e8g8 d2c4 f8e8 c1g5 c6c5 g5f6 g7f6 c4d6 
+2023-07-17 17:17:18,757 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 15 seldepth 21 score cp 14 nodes 263305 time 258 nps 1018946 hashfull 0 pv d7c6 e1g1 d8d6 d2d3 g8f6 b1d2 c8e6 d2c4 e6c4 d3c4 f6e4 d1e1 f7f5 c4c5 e4c5 
+2023-07-17 17:17:18,906 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 16 seldepth 28 score cp 14 nodes 422417 time 407 nps 1036125 hashfull 0 pv d7c6 e1g1 d8d6 d2d3 b7b5 a2a3 g8e7 c1e3 c6c5 b1d2 c8g4 h2h3 g4e6 b2b4 c5c4 d3c4 
+2023-07-17 17:17:19,060 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 17 seldepth 28 score cp 31 nodes 586835 time 562 nps 1043796 hashfull 0 pv d7c6 e1g1 d8d6 d2d3 g8e7 b1d2 b7b5 h2h3 h7h6 a2a3 c8e6 d1e1 c6c5 e1e3 e8c8 a3a4 h6h5 
+2023-07-17 17:17:19,181 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 18 seldepth 28 score cp 24 nodes 714297 time 682 nps 1046632 hashfull 0 pv d7c6 e1g1 d8d6 d2d3 g8e7 b1d2 b7b5 h2h3 c6c5 a2a4 c8b7 a4b5 a6b5 a1a8 b7a8 f1e1 h7h6 c2c4 
+2023-07-17 17:17:20,788 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 19 seldepth 32 score cp 21 nodes 2477084 time 2289 nps 1081772 hashfull 0 pv d7c6 e1g1 g8e7 b1a3 f7f6 a3c4 c8e6 d2d3 c6c5 h2h3 b7b5 c4d2 d8d6 f1e1 e8c8 a2a3 e7c6 a3a4 f6f5 
+2023-07-17 17:17:21,215 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 20 seldepth 32 score cp 27 nodes 2947796 time 2717 nps 1084810 hashfull 0 pv d7c6 e1g1 g8e7 b1a3 f7f6 a3c4 c8e6 d2d3 e7g6 a2a3 c6c5 a1b1 b7b5 c4e3 g6f4 g2g3 f4h3 g1h1 c5c4 d3c4 
+2023-07-17 17:17:21,774 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 21 seldepth 32 score cp 35 nodes 3562427 time 3275 nps 1087489 hashfull 0 pv d7c6 e1g1 g8e7 b1a3 f7f6 a3c4 c8e6 d2d3 e7g6 c4a5 d8b8 a5c4 
+2023-07-17 17:17:23,124 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 22 seldepth 32 score cp 42 nodes 5058405 time 4626 nps 1093409 hashfull 0 pv d7c6 e1g1 g8e7 b1a3 f7f6 a3c4 c8e6 d2d3 e7g6 c4a5 d8c8 c1e3 f8e7 a5b3 e8g8 h2h3 e6f7 d1d2 e7d6 b3c5 g6f4 d3d4 
+2023-07-17 17:17:23,915 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> info depth 23 seldepth 32 score cp 35 nodes 5923292 time 5416 nps 1093474 hashfull 0 pv d7c6 e1g1 g8e7 b1a3 f7f6 a3c4 c8e6 d2d3 e7g6 c4a5 e6c8 a5c4 f8e7 h2h3 e8g8 c1e3 c6c5 f1e1 c8e6 a2a4 g6f4 a4a5 g7g6 
+2023-07-17 17:17:27,999 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> bestmove d7c6
+2023-07-17 17:17:28,000 engine_wrapper (engine_wrapper.py:314) INFO Evaluation: 0.35
+2023-07-17 17:17:28,000 engine_wrapper (engine_wrapper.py:314) INFO Depth: 23
+2023-07-17 17:17:28,001 engine_wrapper (engine_wrapper.py:314) INFO Nodes: 5.9M
+2023-07-17 17:17:28,001 engine_wrapper (engine_wrapper.py:314) INFO Speed: 1.1Mnps
+2023-07-17 17:17:28,001 engine_wrapper (engine_wrapper.py:314) INFO Pv: 4...dxc6 5. O-O Ne7 6. Na3 f6 7. Nc4 Be6 8. d3 Ng6 9. Na5 Bc8 10. Nc4 Be7 11. h3 O-O 12. Be3 c5 13. Re1 Be6 14. a4 Nf4 15. a5 g6
+2023-07-17 17:17:28,002 urllib3.connectionpool (connectionpool.py:292) DEBUG Resetting dropped connection: lichess.org
+2023-07-17 17:17:28,114 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/eIA9fB6h/move/d7c6?offeringDraw=false HTTP/1.1" 200 11
+2023-07-17 17:17:28,118 __mp_main__ (lichess-bot.py:693) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6', 'wtime': 289680, 'btime': 279350, 'winc': 3000, 'binc': 3000, 'status': 'started'}
+2023-07-17 17:21:20,992 __main__ (lichess-bot.py:381) DEBUG Event: {'type': 'correspondence_ping'}
+2023-07-17 17:22:17,850 __mp_main__ (lichess-bot.py:693) DEBUG Game state: {'type': 'gameState', 'moves': 'e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6', 'wtime': 0, 'btime': 279350, 'winc': 3000, 'binc': 3000, 'status': 'outoftime', 'winner': 'black'}
+2023-07-17 17:22:17,850 __main__ (lichess-bot.py:381) DEBUG Event: {'type': 'gameFinish', 'game': {'fullId': 'eIA9fB6hAHZk', 'gameId': 'eIA9fB6h', 'fen': 'r1bqkbnr/1pp2ppp/p1p5/4p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 5', 'color': 'black', 'lastMove': 'd7c6', 'source': 'friend', 'status': {'id': 35, 'name': 'outoftime'}, 'variant': {'key': 'standard', 'name': 'Standard'}, 'speed': 'blitz', 'perf': 'blitz', 'rated': False, 'hasMoved': True, 'opponent': {'id': 'kwovadis7', 'username': 'Kwovadis7', 'rating': 1404}, 'isMyTurn': False, 'secondsLeft': 279, 'winner': 'black', 'compat': {'bot': True, 'board': True}, 'id': 'eIA9fB6h'}}
+2023-07-17 17:22:17,850 __main__ (lichess-bot.py:264) INFO +++ Process Freed. Count: 0. IDs: None
+2023-07-17 17:22:17,850 chess.engine (engine.py:1023) DEBUG <UciProtocol (pid=142678)>: << position startpos moves e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5c6 d7c6
+2023-07-17 17:22:17,850 __mp_main__ (lichess-bot.py:782) INFO beatrijs-bot won!
+2023-07-17 17:22:17,851 __mp_main__ (lichess-bot.py:804) INFO Kwovadis7 forfeited on time.
+2023-07-17 17:22:17,851 conversation (conversation.py:82) INFO *** https://lichess.org/eIA9fB6h/black [player] beatrijs-bot: Good game!
+2023-07-17 17:22:17,852 urllib3.connectionpool (connectionpool.py:292) DEBUG Resetting dropped connection: lichess.org
+2023-07-17 17:22:17,970 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/eIA9fB6h/chat HTTP/1.1" 200 11
+2023-07-17 17:22:17,970 conversation (conversation.py:82) INFO *** https://lichess.org/eIA9fB6h/black [spectator] beatrijs-bot: Thanks for watching!
+2023-07-17 17:22:17,991 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "POST /api/bot/game/eIA9fB6h/chat HTTP/1.1" 200 11
+2023-07-17 17:22:18,019 urllib3.connectionpool (connectionpool.py:546) DEBUG https://lichess.org:443 "GET /api/account/playing HTTP/1.1" 200 17
+2023-07-17 17:22:18,020 chess.engine (engine.py:1023) DEBUG <UciProtocol (pid=142678)>: << stop
+2023-07-17 17:22:18,020 chess.engine (engine.py:1023) DEBUG <UciProtocol (pid=142678)>: << isready
+2023-07-17 17:22:18,020 chess.engine (engine.py:1049) DEBUG <UciProtocol (pid=142678)>: >> readyok
+2023-07-17 17:22:18,021 chess.engine (engine.py:1023) DEBUG <UciProtocol (pid=142678)>: << quit
+2023-07-17 17:22:18,031 chess.engine (engine.py:1020) DEBUG <UciProtocol (pid=142678)>: Process exited
+2023-07-17 17:22:18,031 chess.engine (engine.py:1007) DEBUG <UciProtocol (pid=142678)>: Connection lost (exit code: 0, error: None)
+2023-07-17 17:22:18,032 __mp_main__ (lichess-bot.py:758) INFO --- https://lichess.org/eIA9fB6h/black Game over
+2023-07-17 17:22:18,033 __main__ (lichess-bot.py:381) DEBUG Event: {'type': 'local_game_done', 'game': {'id': 'eIA9fB6h'}}
+2023-07-17 17:26:20,993 __main__ (lichess-bot.py:381) DEBUG Event: {'type': 'correspondence_ping'}
